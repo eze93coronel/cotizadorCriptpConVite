@@ -12,6 +12,7 @@ const InputSubmit = styled.input`
     text-transform:uppercase ;
     font-size:20px;
     border-radius: 5px;
+    margin-top:30px;
     transition: background-color .5s ease;
 
     & :hover{
@@ -25,14 +26,14 @@ const Formluario = () => {
 
   
 
-   const [SelectMonedas] = useSelectMonedas('ELIGE tU MONEDA',monedas);
+   const [moneda,SelectMonedas] = useSelectMonedas('ELIGE tU MONEDA',monedas);
   // const [SelectCriptoMonedas] = useSelectMonedas('elige tu criptomoneda')
    
   
     return (  
      <form>
          < SelectMonedas />
-
+        {moneda}
          <InputSubmit type="submit" value="Cotizar"/>
      </form>
 
